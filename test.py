@@ -32,6 +32,10 @@ parser.add_argument('--lr', type=float, default=0.001,
                     help='learning rate')
 parser.add_argument('--nhid', type=int, default=128,
                     help='number of hidden units in GCN')
+# GEM
+parser.add_argument('--hop', default=2,
+                    help='number of hops of neighbors to be aggregated')
+parser.add_argument('--output_dim', default=128, help='gem layer unit')
 
 args = parser.parse_args()
 
